@@ -5,12 +5,9 @@ Mirror the feeds outside of Greenbone’s infrastructure.
 Distribute them to multiple OpenVAS scanners without overloading Greenbone’s servers.
 Automate updates and deployments.
 
--------------------------------------------------------------------------------------------------------------------------------
-
 📂 Repository Structure
 The repository keeps the same folder layout that OpenVAS expects:
 openvas-feed-sync/
-
 ├── nvt-feed/ # Network Vulnerability Tests
 ├── scap-feed/ # SCAP data (vulnerability mappings)
 ├── cert-feed/ # CERT advisories
