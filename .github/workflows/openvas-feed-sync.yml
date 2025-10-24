@@ -63,7 +63,7 @@ jobs:
 
       - name: Pull VT feed (Notus)
         run: |
-          rsync -avz --ignore-existing --progress rsync://feed.community.greenbone.net/community/vulnerability-feed/24.10/vt-data/notus/ openvas-feeds/vt-feed/
+          rsync -avz --ignore-existing --progress rsync://feed.community.greenbone.net/community/vulnerability-feed/24.10/vt-data/ openvas-feeds/vt-feed/
 
       - name: Commit and push changes
         run: |
