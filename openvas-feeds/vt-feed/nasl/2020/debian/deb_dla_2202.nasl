@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: 2020 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.892202");
+  script_cve_id("CVE-2019-14846", "CVE-2020-1733", "CVE-2020-1739", "CVE-2020-1740");
+  script_tag(name:"creation_date", value:"2020-05-06 03:00:09 +0000 (Wed, 06 May 2020)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"3.7");
+  script_tag(name:"cvss_base_vector", value:"AV:L/AC:H/Au:N/C:P/I:P/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2021-06-07 15:04:00 +0000 (Mon, 07 Jun 2021)");
+
+  script_name("Debian: Security Advisory (DLA-2202)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2020 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-2202");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2020/dla-2202");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'ansible' package(s) announced via the DLA-2202 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities were discovered in Ansible, a configuration management, deployment, and task execution system.
+
+CVE-2019-14846
+
+Ansible was logging at the DEBUG level which lead to a disclosure of credentials if a plugin used a library that logged credentials at the DEBUG level. This flaw does not affect Ansible modules, as those are executed in a separate process.
+
+CVE-2020-1733
+
+A race condition flaw was found when running a playbook with an unprivileged become user. When Ansible needs to run a module with become user, the temporary directory is created in /var/tmp. This directory is created with 'umask 77 && mkdir -p dir', this operation does not fail if the directory already exists and is owned by another user. An attacker could take advantage to gain control of the become user as the target directory can be retrieved by iterating '/proc/pid/cmdline'.
+
+CVE-2020-1739
+
+A flaw was found when a password is set with the argument password of svn module, it is used on svn command line, disclosing to other users within the same node. An attacker could take advantage by reading the cmdline file from that particular PID on the procfs.
+
+CVE-2020-1740
+
+A flaw was found when using Ansible Vault for editing encrypted files. When a user executes 'ansible-vault edit', another user on the same computer can read the old and new secret, as it is created in a temporary file with mkstemp and the returned file descriptor is closed and the method write_data is called to write the existing secret in the file. This method will delete the file before recreating it insecurely.
+
+For Debian 8 Jessie, these problems have been fixed in version 1.7.2+dfsg-2+deb8u3.
+
+We recommend that you upgrade your ansible packages.
+
+Further information about Debian LTS security advisories, how to apply these updates to your system and frequently asked questions can be found at: [link moved to references]");
+
+  script_tag(name:"affected", value:"'ansible' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

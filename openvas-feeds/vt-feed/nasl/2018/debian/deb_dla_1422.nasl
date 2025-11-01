@@ -1,0 +1,83 @@
+# SPDX-FileCopyrightText: 2018 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.891422");
+  script_cve_id("CVE-2017-5715", "CVE-2017-5753", "CVE-2018-1000204", "CVE-2018-1066", "CVE-2018-10853", "CVE-2018-1093", "CVE-2018-10940", "CVE-2018-1130", "CVE-2018-11506", "CVE-2018-12233", "CVE-2018-3665", "CVE-2018-5814", "CVE-2018-9422");
+  script_tag(name:"creation_date", value:"2018-07-15 22:00:00 +0000 (Sun, 15 Jul 2018)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.2");
+  script_tag(name:"cvss_base_vector", value:"AV:L/AC:L/Au:N/C:C/I:C/A:C");
+  script_tag(name:"severity_vector", value:"CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2019-08-19 20:15:00 +0000 (Mon, 19 Aug 2019)");
+
+  script_name("Debian: Security Advisory (DLA-1422)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2018 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-1422");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2018/dla-1422-2");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'linux' package(s) announced via the DLA-1422 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"The previous update to linux failed to build for the armhf (ARM EABI hard-float) architecture. This update corrects that. For all other architectures, there is no need to upgrade or reboot again. For reference, the relevant part of the original advisory text follows.
+
+Several vulnerabilities have been discovered in the Linux kernel that may lead to a privilege escalation, denial of service or information leaks.
+
+CVE-2017-5715
+
+Multiple researchers have discovered a vulnerability in various processors supporting speculative execution, enabling an attacker controlling an unprivileged process to read memory from arbitrary addresses, including from the kernel and all other processes running on the system.
+
+This specific attack has been named Spectre variant 2 (branch target injection) and is mitigated for the x86 architecture (amd64 and i386) by using new microcoded features.
+
+This mitigation requires an update to the processor's microcode, which is non-free. For recent Intel processors, this is included in the intel-microcode package from version 3.20180425.1~deb8u1. For other processors, it may be included in an update to the system BIOS or UEFI firmware, or in a later update to the amd64-microcode package.
+
+This vulnerability was already mitigated for the x86 architecture by the retpoline feature.
+
+CVE-2017-5753
+
+Further instances of code that was vulnerable to Spectre variant 1 (bounds-check bypass) have been mitigated.
+
+CVE-2018-1066
+
+Dan Aloni reported to Red Hat that the CIFS client implementation would dereference a null pointer if the server sent an invalid response during NTLMSSP setup negotiation. This could be used by a malicious server for denial of service.
+
+The previously applied mitigation for this issue was not appropriate for Linux 3.16 and has been replaced by an alternate fix.
+
+CVE-2018-1093
+
+Wen Xu reported that a crafted ext4 filesystem image could trigger an out-of-bounds read in the ext4_valid_block_bitmap() function. A local user able to mount arbitrary filesystems could use this for denial of service.
+
+CVE-2018-1130
+
+The syzbot software found that the DCCP implementation of sendmsg() does not check the socket state, potentially leading to a null pointer dereference. A local user could use this to cause a denial of service (crash).
+
+CVE-2018-3665
+
+Multiple researchers have discovered that some Intel x86 processors can speculatively read floating-point and vector registers even when access to those registers is disabled. The Linux kernel's lazy FPU feature relies on that access control to avoid saving and restoring those registers for tasks that do not use them, and was enabled by default on x86 processors that do not support the XSAVEOPT instruction.
+
+If lazy FPU is enabled on one of the affected processors, an attacker controlling an unprivileged process may be able to read sensitive information from other users' processes or the kernel. This ... [Please see the references for more information on the vulnerabilities]");
+
+  script_tag(name:"affected", value:"'linux' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

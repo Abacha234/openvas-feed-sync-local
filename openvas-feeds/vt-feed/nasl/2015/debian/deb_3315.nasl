@@ -1,0 +1,148 @@
+# SPDX-FileCopyrightText: 2015 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.703315");
+  script_cve_id("CVE-2015-1266", "CVE-2015-1267", "CVE-2015-1268", "CVE-2015-1269", "CVE-2015-1270", "CVE-2015-1271", "CVE-2015-1272", "CVE-2015-1273", "CVE-2015-1274", "CVE-2015-1276", "CVE-2015-1277", "CVE-2015-1278", "CVE-2015-1279", "CVE-2015-1280", "CVE-2015-1281", "CVE-2015-1282", "CVE-2015-1283", "CVE-2015-1284", "CVE-2015-1285", "CVE-2015-1286", "CVE-2015-1287", "CVE-2015-1288", "CVE-2015-1289");
+  script_tag(name:"creation_date", value:"2015-07-22 22:00:00 +0000 (Wed, 22 Jul 2015)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2018-10-30 16:27:00 +0000 (Tue, 30 Oct 2018)");
+
+  script_name("Debian: Security Advisory (DSA-3315)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2015 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-3315");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2015/dsa-3315");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'chromium-browser' package(s) announced via the DSA-3315 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities were discovered in the chromium web browser.
+
+CVE-2015-1266
+
+Intended access restrictions could be bypassed for certain URLs like chrome://gpu.
+
+CVE-2015-1267
+
+A way to bypass the Same Origin Policy was discovered.
+
+CVE-2015-1268
+
+Mariusz Mlynski also discovered a way to bypass the Same Origin Policy.
+
+CVE-2015-1269
+
+Mike Rudy discovered that hostnames were not properly compared in the HTTP Strict Transport Policy and HTTP Public Key Pinning features, which could allow those access restrictions to be bypassed.
+
+CVE-2015-1270
+
+Atte Kettunen discovered an uninitialized memory read in the ICU library.
+
+CVE-2015-1271
+
+cloudfuzzer discovered a buffer overflow in the pdfium library.
+
+CVE-2015-1272
+
+Chamal de Silva discovered race conditions in the GPU process implementation.
+
+CVE-2015-1273
+
+makosoft discovered a buffer overflow in openjpeg, which is used by the pdfium library embedded in chromium.
+
+CVE-2015-1274
+
+andrewm.bpi discovered that the auto-open list allowed certain file types to be executed immediately after download.
+
+CVE-2015-1276
+
+Colin Payne discovered a use-after-free issue in the IndexedDB implementation.
+
+CVE-2015-1277
+
+SkyLined discovered a use-after-free issue in chromium's accessibility implementation.
+
+CVE-2015-1278
+
+Chamal de Silva discovered a way to use PDF documents to spoof a URL.
+
+CVE-2015-1279
+
+mlafon discovered a buffer overflow in the pdfium library.
+
+CVE-2015-1280
+
+cloudfuzzer discovered a memory corruption issue in the SKIA library.
+
+CVE-2015-1281
+
+Masato Knugawa discovered a way to bypass the Content Security Policy.
+
+CVE-2015-1282
+
+Chamal de Silva discovered multiple use-after-free issues in the pdfium library.
+
+CVE-2015-1283
+
+Huzaifa Sidhpurwala discovered a buffer overflow in the expat library.
+
+CVE-2015-1284
+
+Atte Kettunen discovered that the maximum number of page frames was not correctly checked.
+
+CVE-2015-1285
+
+gazheyes discovered an information leak in the XSS auditor, which normally helps to prevent certain classes of cross-site scripting problems.
+
+CVE-2015-1286
+
+A cross-site scripting issue was discovered in the interface to the v8 javascript library.
+
+CVE-2015-1287
+
+filedescriptor discovered a way to bypass the Same Origin Policy.
+
+CVE-2015-1288
+
+Mike Ruddy discovered that the spellchecking dictionaries could still be downloaded over plain HTTP (related to CVE-2015-1263).
+
+CVE-2015-1289
+
+The chrome 44 development team found and fixed various issues during internal auditing.
+
+In addition to the above issues, Google disabled the hotword extension by default in this version, which if enabled downloads files without the user's intervention.
+
+For the stable distribution (jessie), these problems have been fixed in version 44.0.2403.89-1~deb8u1.
+
+For the testing distribution (stretch), these problems will be fixed soon.
+
+For the unstable distribution (sid), these problems have been fixed in version 44.0.2403.89-1.
+
+We recommend that you upgrade your chromium-browser packages.");
+
+  script_tag(name:"affected", value:"'chromium-browser' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

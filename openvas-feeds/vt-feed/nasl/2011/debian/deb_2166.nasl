@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2011 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.69003");
+  script_cve_id("CVE-2011-0777", "CVE-2011-0778", "CVE-2011-0783", "CVE-2011-0981", "CVE-2011-0983", "CVE-2011-0984", "CVE-2011-0985");
+  script_tag(name:"creation_date", value:"2011-03-07 15:04:02 +0000 (Mon, 07 Mar 2011)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
+
+  script_name("Debian: Security Advisory (DSA-2166)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2011 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-2166");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2011/dsa-2166");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'chromium-browser' package(s) announced via the DSA-2166 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities were discovered in the Chromium browser. The Common Vulnerabilities and Exposures project identifies the following problems:
+
+CVE-2011-0777
+
+Use-after-free vulnerability in Google Chrome before 9.0.597.84 allows remote attackers to cause a denial of service or possibly have unspecified other impact via vectors related to image loading.
+
+CVE-2011-0778
+
+Google Chrome before 9.0.597.84 does not properly restrict drag and drop operations, which might allow remote attackers to bypass the Same Origin Policy via unspecified vectors.
+
+CVE-2011-0783
+
+Unspecified vulnerability in Google Chrome before 9.0.597.84 allows user-assisted remote attackers to cause a denial of service (application crash) via vectors involving a bad volume setting.
+
+CVE-2011-0983
+
+Google Chrome before 9.0.597.94 does not properly handle anonymous blocks, which allows remote attackers to cause a denial of service or possibly have unspecified other impact via unknown vectors that lead to a stale pointer.
+
+CVE-2011-0981
+
+Google Chrome before 9.0.597.94 does not properly perform event handling for animations, which allows remote attackers to cause a denial of service or possibly have unspecified other impact via unknown vectors that lead to a stale pointer.
+
+CVE-2011-0984
+
+Google Chrome before 9.0.597.94 does not properly handle plug-ins, which allows remote attackers to cause a denial of service (out-of-bounds read) via unspecified vectors.
+
+CVE-2011-0985
+
+Google Chrome before 9.0.597.94 does not properly perform process termination upon memory exhaustion, which has unspecified impact and remote attack vectors.
+
+For the stable distribution (squeeze), these problems have been fixed in version 6.0.472.63~r59945-5+squeeze2.
+
+For the testing distribution (wheezy), these problems will be fixed soon.
+
+For the unstable distribution (sid), these problems have been fixed in version 9.0.597.98~r74359-1.
+
+We recommend that you upgrade your chromium-browser packages.");
+
+  script_tag(name:"affected", value:"'chromium-browser' package(s) on Debian 6.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

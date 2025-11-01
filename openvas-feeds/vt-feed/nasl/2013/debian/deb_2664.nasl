@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2013 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.702664");
+  script_cve_id("CVE-2013-1762");
+  script_tag(name:"creation_date", value:"2013-05-01 22:00:00 +0000 (Wed, 01 May 2013)");
+  script_version("2025-08-05T05:45:17+0000");
+  script_tag(name:"last_modification", value:"2025-08-05 05:45:17 +0000 (Tue, 05 Aug 2025)");
+  script_tag(name:"cvss_base", value:"6.6");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:H/Au:N/C:P/I:P/A:C");
+
+  script_name("Debian: Security Advisory (DSA-2664)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2013 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-2664");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2013/dsa-2664");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'stunnel4' package(s) announced via the DSA-2664 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Stunnel, a program designed to work as an universal SSL tunnel for network daemons, is prone to a buffer overflow vulnerability when using the Microsoft NT LAN Manager (NTLM) authentication (protocolAuthentication = NTLM) together with the connect protocol method (protocol = connect). With these prerequisites and using stunnel4 in SSL client mode (client = yes) on a 64 bit host, an attacker could possibly execute arbitrary code with the privileges of the stunnel process, if the attacker can either control the specified proxy server or perform man-in-the-middle attacks on the tcp session between stunnel and the proxy server.
+
+Note that for the testing distribution (wheezy) and the unstable distribution (sid), stunnel4 is compiled with stack smashing protection enabled, which should help protect against arbitrary code execution.
+
+For the stable distribution (squeeze), this problem has been fixed in version 3:4.29-1+squeeze1.
+
+For the testing distribution (wheezy), this problem has been fixed in version 3:4.53-1.1.
+
+For the unstable distribution (sid), this problem has been fixed in version 3:4.53-1.1.
+
+We recommend that you upgrade your stunnel4 packages.");
+
+  script_tag(name:"affected", value:"'stunnel4' package(s) on Debian 6.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

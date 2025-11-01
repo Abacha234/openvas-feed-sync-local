@@ -1,0 +1,65 @@
+# SPDX-FileCopyrightText: 2017 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.703854");
+  script_cve_id("CVE-2017-3136", "CVE-2017-3137", "CVE-2017-3138");
+  script_tag(name:"creation_date", value:"2017-05-13 22:00:00 +0000 (Sat, 13 May 2017)");
+  script_version("2024-10-10T07:25:31+0000");
+  script_tag(name:"last_modification", value:"2024-10-10 07:25:31 +0000 (Thu, 10 Oct 2024)");
+  script_tag(name:"cvss_base", value:"5.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2019-10-09 23:27:00 +0000 (Wed, 09 Oct 2019)");
+
+  script_name("Debian: Security Advisory (DSA-3854)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2017 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-3854");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2017/dsa-3854");
+  script_xref(name:"URL", value:"https://kb.isc.org/article/AA-01471");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'bind9' package(s) announced via the DSA-3854 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities were discovered in BIND, a DNS server implementation. The Common Vulnerabilities and Exposures project identifies the following problems:
+
+CVE-2017-3136
+
+Oleg Gorokhov of Yandex discovered that BIND does not properly handle certain queries when using DNS64 with the 'break-dnssec yes,' option, allowing a remote attacker to cause a denial-of-service.
+
+CVE-2017-3137
+
+It was discovered that BIND makes incorrect assumptions about the ordering of records in the answer section of a response containing CNAME or DNAME resource records, leading to situations where BIND exits with an assertion failure. An attacker can take advantage of this condition to cause a denial-of-service.
+
+CVE-2017-3138
+
+Mike Lalumiere of Dyn, Inc. discovered that BIND can exit with a REQUIRE assertion failure if it receives a null command string on its control channel. Note that the fix applied in Debian is only applied as a hardening measure. Details about the issue can be found at [link moved to references].
+
+For the stable distribution (jessie), these problems have been fixed in version 1:9.9.5.dfsg-9+deb8u11.
+
+For the unstable distribution (sid), these problems have been fixed in version 1:9.10.3.dfsg.P4-12.3.
+
+We recommend that you upgrade your bind9 packages.");
+
+  script_tag(name:"affected", value:"'bind9' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

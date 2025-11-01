@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2021 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.892870");
+  script_cve_id("CVE-2021-44832");
+  script_tag(name:"creation_date", value:"2021-12-30 02:00:35 +0000 (Thu, 30 Dec 2021)");
+  script_version("2024-01-19T05:06:18+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:18 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"8.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:S/C:C/I:C/A:C");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2022-07-01 18:34:00 +0000 (Fri, 01 Jul 2022)");
+
+  script_name("Debian: Security Advisory (DLA-2870)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2021 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-2870");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2021/dla-2870");
+  script_xref(name:"URL", value:"https://security-tracker.debian.org/tracker/apache-log4j2");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'apache-log4j2' package(s) announced via the DLA-2870 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Apache Log4j2, a Java Logging Framework, is vulnerable to a remote code execution (RCE) attack where an attacker with permission to modify the logging configuration file can construct a malicious configuration using a JDBC Appender with a data source referencing a JNDI URI which can execute remote code. This issue is fixed by limiting JNDI data source names to the java protocol.
+
+For Debian 9 stretch, this problem has been fixed in version 2.12.4-0+deb9u1.
+
+We recommend that you upgrade your apache-log4j2 packages.
+
+For the detailed security status of apache-log4j2 please refer to its security tracker page at: [link moved to references]
+
+Further information about Debian LTS security advisories, how to apply these updates to your system and frequently asked questions can be found at: [link moved to references]");
+
+  script_tag(name:"affected", value:"'apache-log4j2' package(s) on Debian 9.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

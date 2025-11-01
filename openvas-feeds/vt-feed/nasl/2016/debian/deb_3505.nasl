@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2016 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.703505");
+  script_cve_id("CVE-2015-7830", "CVE-2015-8711", "CVE-2015-8712", "CVE-2015-8713", "CVE-2015-8714", "CVE-2015-8715", "CVE-2015-8716", "CVE-2015-8717", "CVE-2015-8718", "CVE-2015-8719", "CVE-2015-8720", "CVE-2015-8721", "CVE-2015-8722", "CVE-2015-8723", "CVE-2015-8724", "CVE-2015-8725", "CVE-2015-8726", "CVE-2015-8727", "CVE-2015-8728", "CVE-2015-8729", "CVE-2015-8730", "CVE-2015-8732", "CVE-2015-8733");
+  script_tag(name:"creation_date", value:"2016-03-03 23:00:00 +0000 (Thu, 03 Mar 2016)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"4.3");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:N/I:N/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2016-12-07 18:29:00 +0000 (Wed, 07 Dec 2016)");
+
+  script_name("Debian: Security Advisory (DSA-3505)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2016 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-3505");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2016/dsa-3505");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'wireshark' package(s) announced via the DSA-3505 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Multiple vulnerabilities were discovered in the dissectors/parsers for Pcapng, NBAP, UMTS FP, DCOM, AllJoyn, T.38, SDP, NLM, DNS, BED, SCTP, 802.11, DIAMETER, VeriWave, RVSP, ANSi A, GSM A, Ascend, NBAP, ZigBee ZCL and Sniffer which could result in denial of service.
+
+For the oldstable distribution (wheezy), these problems have been fixed in version 1.8.2-5wheezy17.
+
+For the stable distribution (jessie), these problems have been fixed in version 1.12.1+g01b65bf-4+deb8u4.
+
+For the testing distribution (stretch), these problems have been fixed in version 2.0.2+ga16e22e-1.
+
+For the unstable distribution (sid), these problems have been fixed in version 2.0.2+ga16e22e-1.
+
+We recommend that you upgrade your wireshark packages.");
+
+  script_tag(name:"affected", value:"'wireshark' package(s) on Debian 7, Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

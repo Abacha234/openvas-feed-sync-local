@@ -1,0 +1,68 @@
+# SPDX-FileCopyrightText: 2023 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.893342");
+  script_cve_id("CVE-2022-41859", "CVE-2022-41860", "CVE-2022-41861");
+  script_tag(name:"creation_date", value:"2023-02-25 02:00:16 +0000 (Sat, 25 Feb 2023)");
+  script_version("2024-01-19T05:06:18+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:18 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:C");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2023-01-24 19:53:00 +0000 (Tue, 24 Jan 2023)");
+
+  script_name("Debian: Security Advisory (DLA-3342)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2023 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-3342");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2023/dla-3342");
+  script_xref(name:"URL", value:"https://security-tracker.debian.org/tracker/freeradius");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'freeradius' package(s) announced via the DLA-3342 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several flaws were found in freeradius, a high-performance and highly configurable RADIUS server.
+
+CVE-2022-41859
+
+In freeradius, the EAP-PWD function compute_password_element() leaks information about the password which allows an attacker to substantially reduce the size of an offline dictionary attack.
+
+CVE-2022-41860
+
+In freeradius, when an EAP-SIM supplicant sends an unknown SIM option, the server will try to look that option up in the internal dictionaries. This lookup will fail, but the SIM code will not check for that failure. Instead, it will dereference a NULL pointer, and cause the server to crash.
+
+CVE-2022-41861
+
+A malicious RADIUS client or home server can send a malformed attribute which can cause the server to crash.
+
+For Debian 10 buster, these problems have been fixed in version 3.0.17+dfsg-1.1+deb10u2.
+
+We recommend that you upgrade your freeradius packages.
+
+For the detailed security status of freeradius please refer to its security tracker page at: [link moved to references]
+
+Further information about Debian LTS security advisories, how to apply these updates to your system and frequently asked questions can be found at: [link moved to references]");
+
+  script_tag(name:"affected", value:"'freeradius' package(s) on Debian 10.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

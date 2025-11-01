@@ -1,0 +1,87 @@
+# SPDX-FileCopyrightText: 2019 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.891731");
+  script_cve_id("CVE-2016-10741", "CVE-2017-13305", "CVE-2017-5753", "CVE-2018-12896", "CVE-2018-13053", "CVE-2018-16862", "CVE-2018-16884", "CVE-2018-17972", "CVE-2018-18281", "CVE-2018-18690", "CVE-2018-18710", "CVE-2018-19824", "CVE-2018-19985", "CVE-2018-20169", "CVE-2018-20511", "CVE-2018-3639", "CVE-2018-5848", "CVE-2018-5953", "CVE-2019-3701", "CVE-2019-3819", "CVE-2019-6974", "CVE-2019-7221", "CVE-2019-7222", "CVE-2019-9213");
+  script_tag(name:"creation_date", value:"2019-03-27 22:00:00 +0000 (Wed, 27 Mar 2019)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.2");
+  script_tag(name:"cvss_base_vector", value:"AV:L/AC:L/Au:N/C:C/I:C/A:C");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2022-04-05 20:40:00 +0000 (Tue, 05 Apr 2022)");
+
+  script_name("Debian: Security Advisory (DLA-1731)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2019 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-1731");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2019/dla-1731-2");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'linux' package(s) announced via the DLA-1731 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"The linux update issued as DLA-1731-1 caused a regression in the vmxnet3 (VMware virtual network adapter) driver. This update corrects that regression, and an earlier regression in the CIFS network filesystem implementation introduced in DLA-1422-1. For reference the original advisory text follows.
+
+Several vulnerabilities have been discovered in the Linux kernel that may lead to a privilege escalation, denial of service or information leaks.
+
+CVE-2016-10741
+
+A race condition was discovered in XFS that would result in a crash (BUG). A local user permitted to write to an XFS volume could use this for denial of service.
+
+CVE-2017-5753
+
+Further instances of code that was vulnerable to Spectre variant 1 (bounds-check bypass) have been mitigated.
+
+CVE-2017-13305
+
+A memory over-read was discovered in the keys subsystem's encrypted key type. A local user could use this for denial of service or possibly to read sensitive information.
+
+CVE-2018-3639 (SSB) Multiple researchers have discovered that Speculative Store Bypass (SSB), a feature implemented in many processors, could be used to read sensitive information from another context. In particular, code in a software sandbox may be able to read sensitive information from outside the sandbox. This issue is also known as Spectre variant 4. This update fixes bugs in the mitigations for SSB for AMD processors.
+
+CVE-2018-5848
+
+The wil6210 wifi driver did not properly validate lengths in scan and connection requests, leading to a possible buffer overflow. On systems using this driver, a local user with the CAP_NET_ADMIN capability could use this for denial of service (memory corruption or crash) or potentially for privilege escalation.
+
+CVE-2018-5953
+
+The swiotlb subsystem printed kernel memory addresses to the system log, which could help a local attacker to exploit other vulnerabilities.
+
+CVE-2018-12896, CVE-2018-13053 Team OWL337 reported possible integer overflows in the POSIX timer implementation. These might have some security impact.
+
+CVE-2018-16862
+
+Vasily Averin and Pavel Tikhomirov from Virtuozzo Kernel Team discovered that the cleancache memory management feature did not invalidate cached data for deleted files. On Xen guests using the tmem driver, local users could potentially read data from other users' deleted files if they were able to create new files on the same volume.
+
+CVE-2018-16884
+
+A flaw was found in the NFS 4.1 client implementation. Mounting NFS shares in multiple network namespaces at the same time could lead to a user-after-free. Local users might be able to use this for denial of service (memory corruption or crash) or possibly for privilege escalation.
+
+This can be mitigated by disabling unprivileged users from creating user namespaces, which is the default in Debian.
+
+CVE-2018-17972
+
+Jann Horn reported that the /proc/*/stack files in procfs leaked sensitive data from the kernel. These files are now only ... [Please see the references for more information on the vulnerabilities]");
+
+  script_tag(name:"affected", value:"'linux' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

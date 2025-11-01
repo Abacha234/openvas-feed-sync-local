@@ -1,0 +1,71 @@
+# SPDX-FileCopyrightText: 2019 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.891638");
+  script_cve_id("CVE-2016-3616", "CVE-2018-11212", "CVE-2018-11213", "CVE-2018-11214", "CVE-2018-1152");
+  script_tag(name:"creation_date", value:"2019-01-22 23:00:00 +0000 (Tue, 22 Jan 2019)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"6.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2019-08-06 17:15:00 +0000 (Tue, 06 Aug 2019)");
+
+  script_name("Debian: Security Advisory (DLA-1638)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2019 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-1638");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2019/dla-1638");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'libjpeg-turbo' package(s) announced via the DLA-1638 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities have been resolved in libjpeg-turbo, Debian's default JPEG implementation.
+
+CVE-2016-3616
+
+The cjpeg utility in libjpeg allowed remote attackers to cause a denial of service (NULL pointer dereference and application crash) or execute arbitrary code via a crafted file.
+
+This issue got fixed by the same patch that fixed CVE-2018-11213 and CVE-2018-11214.
+
+CVE-2018-1152
+
+libjpeg-turbo has been found vulnerable to a denial of service vulnerability caused by a divide by zero when processing a crafted BMP image. The issue has been resolved by a boundary check.
+
+CVE-2018-11212
+
+The alloc_sarray function in jmemmgr.c allowed remote attackers to cause a denial of service (divide-by-zero error) via a crafted file.
+
+The issue has been addressed by checking the image size when reading a targa file and throwing an error when image width or height is 0.
+
+CVE-2018-11213 / CVE-2018-11214 The get_text_gray_row and get_text_rgb_row functions in rdppm.c both allowed remote attackers to cause a denial of service (Segmentation fault) via a crafted file. By checking the range of integer values in PPM text files and adding checks to ensure values are within the specified range, both issues
+
+For Debian 8 Jessie, these problems have been fixed in version 1:1.3.1-12+deb8u1.
+
+We recommend that you upgrade your libjpeg-turbo packages.
+
+Further information about Debian LTS security advisories, how to apply these updates to your system and frequently asked questions can be found at: [link moved to references]");
+
+  script_tag(name:"affected", value:"'libjpeg-turbo' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

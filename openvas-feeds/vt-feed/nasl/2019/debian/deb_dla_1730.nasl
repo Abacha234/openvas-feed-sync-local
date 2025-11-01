@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: 2019 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.891730");
+  script_cve_id("CVE-2019-13115", "CVE-2019-3855", "CVE-2019-3856", "CVE-2019-3857", "CVE-2019-3858", "CVE-2019-3859", "CVE-2019-3860", "CVE-2019-3861", "CVE-2019-3862", "CVE-2019-3863");
+  script_tag(name:"creation_date", value:"2019-03-25 22:00:00 +0000 (Mon, 25 Mar 2019)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"9.3");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
+  script_tag(name:"severity_vector", value:"CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2020-10-15 13:42:00 +0000 (Thu, 15 Oct 2020)");
+
+  script_name("Debian: Security Advisory (DLA-1730)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2019 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-1730");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2019/dla-1730-4");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'libssh2' package(s) announced via the DLA-1730 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several more boundary checks have been backported to libssh2's src/sftp.c. Furthermore, all boundary checks in src/sftp.c now result in an LIBSSH2_ERROR_BUFFER_TOO_SMALL error code, rather than a LIBSSH2_ERROR_ OUT_OF_BOUNDARY error code.
+
+As a side note, it was discovered that libssh2's SFTP implementation from Debian jessie only works well against OpenSSH SFTP servers from Debian wheezy, tests against newer OpenSSH versions (such as available in Debian jessie and beyond) interim-fail with SFTP protocol error Error opening remote file. Operation might continue after this error, this depends on application implementations.
+
+For Debian 8 Jessie, this problem has been fixed in version 1.4.3-4.1+deb8u5.
+
+We recommend that you upgrade your libssh2 packages.
+
+Further information about Debian LTS security advisories, how to apply these updates to your system and frequently asked questions can be found at: [link moved to references]");
+
+  script_tag(name:"affected", value:"'libssh2' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

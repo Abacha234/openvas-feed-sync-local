@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2012 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.71256");
+  script_cve_id("CVE-2012-0216");
+  script_tag(name:"creation_date", value:"2012-04-30 11:57:31 +0000 (Mon, 30 Apr 2012)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"4.4");
+  script_tag(name:"cvss_base_vector", value:"AV:L/AC:M/Au:N/C:P/I:P/A:P");
+
+  script_name("Debian: Security Advisory (DSA-2452)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2012 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-2452");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2012/dsa-2452");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'apache2' package(s) announced via the DSA-2452 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Niels Heinen noticed a security issue with the default Apache configuration on Debian if certain scripting modules like mod_php or mod_rivet are installed. The problem arises because the directory /usr/share/doc, which is mapped to the URL /doc, may contain example scripts that can be executed by requests to this URL. Although access to the URL /doc is restricted to connections from localhost, this still creates security issues in two specific configurations:
+
+if some front-end server on the same host forwards connections to an apache2 backend server on the localhost address, or
+
+if the machine running apache2 is also used for web browsing.
+
+Systems not meeting one of these two conditions are not known to be vulnerable. The actual security impact depends on which packages (and accordingly which example scripts) are installed on the system. Possible issues include cross site scripting, code execution, or leakage of sensitive data.
+
+This updates removes the problematic configuration sections from the files /etc/apache2/sites-available/default and .../default-ssl. When upgrading, you should not blindly allow dpkg to replace those files, though. Rather you should merge the changes, namely the removal of the Alias /doc '/usr/share/doc' line and the related <Directory '/usr/share/doc/'> block, into your versions of these config files. You may also want to check if you have copied these sections to any additional virtual host configurations.
+
+For the stable distribution (squeeze), this problem has been fixed in version 2.2.16-6+squeeze7.
+
+For the testing distribution (wheezy), this problem will be fixed in version 2.2.22-4.
+
+For the unstable distribution (sid), this problem will be fixed in version 2.2.22-4.
+
+For the experimental distribution, this problem has been fixed in version 2.4.1-3.
+
+We recommend that you upgrade your apache2 packages and adjust your configuration.");
+
+  script_tag(name:"affected", value:"'apache2' package(s) on Debian 6.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

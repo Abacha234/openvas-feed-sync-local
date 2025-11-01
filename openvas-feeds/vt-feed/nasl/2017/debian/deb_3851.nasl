@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2017 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.703851");
+  script_cve_id("CVE-2017-7484", "CVE-2017-7485", "CVE-2017-7486");
+  script_tag(name:"creation_date", value:"2017-05-11 22:00:00 +0000 (Thu, 11 May 2017)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"5.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
+  script_tag(name:"severity_vector", value:"CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2018-01-05 02:31:00 +0000 (Fri, 05 Jan 2018)");
+
+  script_name("Debian: Security Advisory (DSA-3851)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2017 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-3851");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2017/dsa-3851");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'postgresql-9.4' package(s) announced via the DSA-3851 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities have been found in the PostgreSQL database system:
+
+CVE-2017-7484
+
+Robert Haas discovered that some selectivity estimators did not validate user privileges which could result in information disclosure.
+
+CVE-2017-7485
+
+Daniel Gustafsson discovered that the PGREQUIRESSL environment variable did no longer enforce a TLS connection.
+
+CVE-2017-7486
+
+Andrew Wheelwright discovered that user mappings were insufficiently restricted.
+
+For the stable distribution (jessie), these problems have been fixed in version 9.4.12-0+deb8u1.
+
+We recommend that you upgrade your postgresql-9.4 packages.");
+
+  script_tag(name:"affected", value:"'postgresql-9.4' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

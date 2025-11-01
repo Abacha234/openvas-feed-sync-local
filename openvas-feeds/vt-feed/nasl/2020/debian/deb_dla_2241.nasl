@@ -1,0 +1,83 @@
+# SPDX-FileCopyrightText: 2020 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.892241");
+  script_cve_id("CVE-2015-8839", "CVE-2018-14610", "CVE-2018-14611", "CVE-2018-14612", "CVE-2018-14613", "CVE-2019-19319", "CVE-2019-19447", "CVE-2019-19768", "CVE-2019-20636", "CVE-2019-5108", "CVE-2020-0009", "CVE-2020-0543", "CVE-2020-10690", "CVE-2020-10751", "CVE-2020-10942", "CVE-2020-11494", "CVE-2020-11565", "CVE-2020-11608", "CVE-2020-11609", "CVE-2020-11668", "CVE-2020-12114", "CVE-2020-12464", "CVE-2020-12652", "CVE-2020-12653", "CVE-2020-12654", "CVE-2020-12769", "CVE-2020-12770", "CVE-2020-12826", "CVE-2020-13143", "CVE-2020-1749", "CVE-2020-2732", "CVE-2020-8647", "CVE-2020-8648", "CVE-2020-8649", "CVE-2020-9383");
+  script_tag(name:"creation_date", value:"2020-06-10 03:00:51 +0000 (Wed, 10 Jun 2020)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.2");
+  script_tag(name:"cvss_base_vector", value:"AV:L/AC:L/Au:N/C:C/I:C/A:C");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2020-06-22 22:15:00 +0000 (Mon, 22 Jun 2020)");
+
+  script_name("Debian: Security Advisory (DLA-2241)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2020 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-2241");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2020/dla-2241-2");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'linux' package(s) announced via the DLA-2241 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"This update is now available for all supported architectures. For reference the original advisory text follows.
+
+Several vulnerabilities have been discovered in the Linux kernel that may lead to a privilege escalation, denial of service or information leaks.
+
+CVE-2015-8839
+
+A race condition was found in the ext4 filesystem implementation. A local user could exploit this to cause a denial of service (filesystem corruption).
+
+CVE-2018-14610, CVE-2018-14611, CVE-2018-14612, CVE-2018-14613 Wen Xu from SSLab at Gatech reported that crafted Btrfs volumes could trigger a crash (Oops) and/or out-of-bounds memory access. An attacker able to mount such a volume could use this to cause a denial of service or possibly for privilege escalation.
+
+CVE-2019-5108
+
+Mitchell Frank of Cisco discovered that when the IEEE 802.11 (WiFi) stack was used in AP mode with roaming, it would trigger roaming for a newly associated station before the station was authenticated. An attacker within range of the AP could use this to cause a denial of service, either by filling up a switching table or by redirecting traffic away from other stations.
+
+CVE-2019-19319
+
+Jungyeon discovered that a crafted filesystem can cause the ext4 implementation to deallocate or reallocate journal blocks. A user permitted to mount filesystems could use this to cause a denial of service (crash), or possibly for privilege escalation.
+
+CVE-2019-19447
+
+It was discovered that the ext4 filesystem driver did not safely handle unlinking of an inode that, due to filesystem corruption, already has a link count of 0. An attacker able to mount arbitrary ext4 volumes could use this to cause a denial of service (memory corruption or crash) or possibly for privilege escalation.
+
+CVE-2019-19768
+
+Tristan Madani reported a race condition in the blktrace debug facility that could result in a use-after-free. A local user able to trigger removal of block devices could possibly use this to cause a denial of service (crash) or for privilege escalation.
+
+CVE-2019-20636
+
+The syzbot tool found that the input subsystem did not fully validate keycode changes, which could result in a heap out-of-bounds write. A local user permitted to access the device node for an input or VT device could possibly use this to cause a denial of service (crash or memory corruption) or for privilege escalation.
+
+CVE-2020-0009
+
+Jann Horn reported that the Android ashmem driver did not prevent read-only files from being memory-mapped and then remapped as read-write. However, Android drivers are not enabled in Debian kernel configurations.
+
+CVE-2020-0543
+
+Researchers at VU Amsterdam discovered that on some Intel CPUs supporting the RDRAND and RDSEED instructions, part of a random value generated by these instructions may be used in a later speculative execution on any core of the same physical CPU. Depending on how these instructions are used by applications, a local user or ... [Please see the references for more information on the vulnerabilities]");
+
+  script_tag(name:"affected", value:"'linux' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

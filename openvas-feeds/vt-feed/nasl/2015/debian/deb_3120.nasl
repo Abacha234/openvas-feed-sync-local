@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2015 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.703120");
+  script_cve_id("CVE-2013-1811", "CVE-2013-1934", "CVE-2013-4460", "CVE-2014-6316", "CVE-2014-6387", "CVE-2014-7146", "CVE-2014-8553", "CVE-2014-8554", "CVE-2014-8598", "CVE-2014-8986", "CVE-2014-8988", "CVE-2014-9089", "CVE-2014-9117", "CVE-2014-9269", "CVE-2014-9270", "CVE-2014-9271", "CVE-2014-9272", "CVE-2014-9280", "CVE-2014-9281", "CVE-2014-9388", "CVE-2014-9506");
+  script_tag(name:"creation_date", value:"2015-01-05 23:00:00 +0000 (Mon, 05 Jan 2015)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2021-03-04 20:30:00 +0000 (Thu, 04 Mar 2021)");
+
+  script_name("Debian: Security Advisory (DSA-3120)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2015 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-3120");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2015/dsa-3120");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'mantis' package(s) announced via the DSA-3120 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Multiple security issues have been found in the Mantis bug tracking system, which may result in phishing, information disclosure, CAPTCHA bypass, SQL injection, cross-site scripting or the execution of arbitrary PHP code.
+
+For the stable distribution (wheezy), these problems have been fixed in version 1.2.18-1.
+
+We recommend that you upgrade your mantis packages.");
+
+  script_tag(name:"affected", value:"'mantis' package(s) on Debian 7.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

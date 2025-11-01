@@ -1,0 +1,88 @@
+# SPDX-FileCopyrightText: 2020 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.844526");
+  script_cve_id("CVE-2020-10713", "CVE-2020-14308", "CVE-2020-14309", "CVE-2020-14310", "CVE-2020-14311", "CVE-2020-15705", "CVE-2020-15706", "CVE-2020-15707");
+  script_tag(name:"creation_date", value:"2020-08-05 03:00:27 +0000 (Wed, 05 Aug 2020)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"5.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
+
+  script_name("Ubuntu: Security Advisory (USN-4432-2)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2020 Greenbone AG");
+  script_family("Ubuntu Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"USN-4432-2");
+  script_xref(name:"URL", value:"https://ubuntu.com/security/notices/USN-4432-2");
+  script_xref(name:"URL", value:"https://launchpad.net/bugs/1889556");
+  script_xref(name:"URL", value:"https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/GRUB2SecureBootBypass");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'grub2, grub2-signed' package(s) announced via the USN-4432-2 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"USN-4432-1 fixed vulnerabilities in GRUB2 affecting Secure Boot
+environments. Unfortunately, the update introduced regressions for
+some BIOS systems (either pre-UEFI or UEFI configured in Legacy mode),
+preventing them from successfully booting. This update addresses
+the issue.
+
+Users with BIOS systems that installed GRUB2 versions from USN-4432-1
+should verify that their GRUB2 installation has a correct understanding
+of their boot device location and installed the boot loader correctly.
+
+We apologize for the inconvenience.
+
+Original advisory details:
+
+ Jesse Michael and Mickey Shkatov discovered that the configuration parser
+ in GRUB2 did not properly exit when errors were discovered, resulting in
+ heap-based buffer overflows. A local attacker could use this to execute
+ arbitrary code and bypass UEFI Secure Boot restrictions. (CVE-2020-10713)
+
+ Chris Coulson discovered that the GRUB2 function handling code did not
+ properly handle a function being redefined, leading to a use-after-free
+ vulnerability. A local attacker could use this to execute arbitrary code
+ and bypass UEFI Secure Boot restrictions. (CVE-2020-15706)
+
+ Chris Coulson discovered that multiple integer overflows existed in GRUB2
+ when handling certain filesystems or font files, leading to heap-based
+ buffer overflows. A local attacker could use these to execute arbitrary
+ code and bypass UEFI Secure Boot restrictions. (CVE-2020-14309,
+ CVE-2020-14310, CVE-2020-14311)
+
+ It was discovered that the memory allocator for GRUB2 did not validate
+ allocation size, resulting in multiple integer overflows and heap-based
+ buffer overflows when handling certain filesystems, PNG images or disk
+ metadata. A local attacker could use this to execute arbitrary code and
+ bypass UEFI Secure Boot restrictions. (CVE-2020-14308)
+
+ Mathieu Trudel-Lapierre discovered that in certain situations, GRUB2
+ failed to validate kernel signatures. A local attacker could use this
+ to bypass Secure Boot restrictions. (CVE-2020-15705)
+
+ Colin Watson and Chris Coulson discovered that an integer overflow
+ existed in GRUB2 when handling the initrd command, leading to a heap-based
+ buffer overflow. A local attacker could use this to execute arbitrary code
+ and bypass UEFI Secure Boot restrictions. (CVE-2020-15707)");
+
+  script_tag(name:"affected", value:"'grub2, grub2-signed' package(s) on Ubuntu 14.04, Ubuntu 16.04, Ubuntu 18.04, Ubuntu 20.04.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

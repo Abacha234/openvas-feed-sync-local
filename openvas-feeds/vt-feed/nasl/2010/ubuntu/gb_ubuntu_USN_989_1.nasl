@@ -1,0 +1,96 @@
+# SPDX-FileCopyrightText: 2010 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.840501");
+  script_cve_id("CVE-2010-0397", "CVE-2010-1128", "CVE-2010-1129", "CVE-2010-1130", "CVE-2010-1866", "CVE-2010-1868", "CVE-2010-1917", "CVE-2010-2094", "CVE-2010-2225", "CVE-2010-2531", "CVE-2010-2950", "CVE-2010-3065");
+  script_tag(name:"creation_date", value:"2010-09-22 06:32:53 +0000 (Wed, 22 Sep 2010)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
+
+  script_name("Ubuntu: Security Advisory (USN-989-1)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2010 Greenbone AG");
+  script_family("Ubuntu Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"USN-989-1");
+  script_xref(name:"URL", value:"https://ubuntu.com/security/notices/USN-989-1");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'php5' package(s) announced via the USN-989-1 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Auke van Slooten discovered that PHP incorrectly handled certain xmlrpc
+requests. An attacker could exploit this issue to cause the PHP server to
+crash, resulting in a denial of service. This issue only affected Ubuntu
+6.06 LTS, 8.04 LTS, 9.04 and 9.10. (CVE-2010-0397)
+
+It was discovered that the pseudorandom number generator in PHP did not
+provide the expected entropy. An attacker could exploit this issue to
+predict values that were intended to be random, such as session cookies.
+This issue only affected Ubuntu 6.06 LTS, 8.04 LTS, 9.04 and 9.10.
+(CVE-2010-1128)
+
+It was discovered that PHP did not properly handle directory pathnames that
+lacked a trailing slash character. An attacker could exploit this issue to
+bypass safe_mode restrictions. This issue only affected Ubuntu 6.06 LTS,
+8.04 LTS, 9.04 and 9.10. (CVE-2010-1129)
+
+Grzegorz Stachowiak discovered that the PHP session extension did not
+properly handle semicolon characters. An attacker could exploit this issue
+to bypass safe_mode restrictions. This issue only affected Ubuntu 8.04 LTS,
+9.04 and 9.10. (CVE-2010-1130)
+
+Stefan Esser discovered that PHP incorrectly decoded remote HTTP chunked
+encoding streams. An attacker could exploit this issue to cause the PHP
+server to crash and possibly execute arbitrary code with application
+privileges. This issue only affected Ubuntu 10.04 LTS. (CVE-2010-1866)
+
+Mateusz Kocielski discovered that certain PHP SQLite functions incorrectly
+handled empty SQL queries. An attacker could exploit this issue to possibly
+execute arbitrary code with application privileges. (CVE-2010-1868)
+
+Mateusz Kocielski discovered that PHP incorrectly handled certain arguments
+to the fnmatch function. An attacker could exploit this flaw and cause the
+PHP server to consume all available stack memory, resulting in a denial of
+service. (CVE-2010-1917)
+
+Stefan Esser discovered that PHP incorrectly handled certain strings in the
+phar extension. An attacker could exploit this flaw to possibly view
+sensitive information. This issue only affected Ubuntu 10.04 LTS.
+(CVE-2010-2094, CVE-2010-2950)
+
+Stefan Esser discovered that PHP incorrectly handled deserialization of
+SPLObjectStorage objects. A remote attacker could exploit this issue to
+view sensitive information and possibly execute arbitrary code with
+application privileges. This issue only affected Ubuntu 8.04 LTS, 9.04,
+9.10 and 10.04 LTS. (CVE-2010-2225)
+
+It was discovered that PHP incorrectly filtered error messages when limits
+for memory, execution time, or recursion were exceeded. A remote attacker
+could exploit this issue to possibly view sensitive information.
+(CVE-2010-2531)
+
+Stefan Esser discovered that the PHP session serializer incorrectly handled
+the PS_UNDEF_MARKER marker. An attacker could exploit this issue to alter
+arbitrary session variables. (CVE-2010-3065)");
+
+  script_tag(name:"affected", value:"'php5' package(s) on Ubuntu 6.06, Ubuntu 8.04, Ubuntu 9.04, Ubuntu 9.10, Ubuntu 10.04.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

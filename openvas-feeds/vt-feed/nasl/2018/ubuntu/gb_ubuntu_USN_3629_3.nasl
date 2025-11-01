@@ -1,0 +1,66 @@
+# SPDX-FileCopyrightText: 2018 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.843517");
+  script_cve_id("CVE-2018-2755", "CVE-2018-2758", "CVE-2018-2759", "CVE-2018-2761", "CVE-2018-2762", "CVE-2018-2766", "CVE-2018-2769", "CVE-2018-2771", "CVE-2018-2773", "CVE-2018-2775", "CVE-2018-2776", "CVE-2018-2777", "CVE-2018-2778", "CVE-2018-2779", "CVE-2018-2780", "CVE-2018-2781", "CVE-2018-2782", "CVE-2018-2784", "CVE-2018-2786", "CVE-2018-2787", "CVE-2018-2810", "CVE-2018-2812", "CVE-2018-2813", "CVE-2018-2816", "CVE-2018-2817", "CVE-2018-2818", "CVE-2018-2819", "CVE-2018-2839", "CVE-2018-2846");
+  script_tag(name:"creation_date", value:"2018-05-08 07:25:32 +0000 (Tue, 08 May 2018)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"6.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:N/I:N/A:C");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2022-07-19 17:02:00 +0000 (Tue, 19 Jul 2022)");
+
+  script_name("Ubuntu: Security Advisory (USN-3629-3)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2018 Greenbone AG");
+  script_family("Ubuntu Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"USN-3629-3");
+  script_xref(name:"URL", value:"https://ubuntu.com/security/notices/USN-3629-3");
+  script_xref(name:"URL", value:"http://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-60.html");
+  script_xref(name:"URL", value:"http://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-22.html");
+  script_xref(name:"URL", value:"http://www.oracle.com/technetwork/security-advisory/cpuapr2018-3678067.html");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'mysql-5.7' package(s) announced via the USN-3629-3 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"USN-3629-1 fixed vulnerabilities in MySQL. This update provides the
+corresponding updates for Ubuntu 18.04 LTS.
+
+Original advisory details:
+
+ Multiple security issues were discovered in MySQL and this update includes
+ new upstream MySQL versions to fix these issues.
+
+ MySQL has been updated to 5.5.60 in Ubuntu 14.04 LTS. Ubuntu 16.04 LTS, and
+ Ubuntu 17.10 have been updated to MySQL 5.7.22.
+
+ In addition to security fixes, the updated packages contain bug fixes, new
+ features, and possibly incompatible changes.
+
+ Please see the following for more information:
+ [link moved to references]
+ [link moved to references]
+ [link moved to references]");
+
+  script_tag(name:"affected", value:"'mysql-5.7' package(s) on Ubuntu 18.04.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

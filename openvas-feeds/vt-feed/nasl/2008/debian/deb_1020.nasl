@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2008 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.56472");
+  script_cve_id("CVE-2006-0459");
+  script_tag(name:"creation_date", value:"2008-01-17 22:09:45 +0000 (Thu, 17 Jan 2008)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
+
+  script_name("Debian: Security Advisory (DSA-1020)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2008 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-1020");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2006/dsa-1020");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'flex' package(s) announced via the DSA-1020 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Chris Moore discovered that flex, a scanner generator, generates code, which allocates insufficient memory, if the grammar contains REJECT statements or trailing context rules. This may lead to a buffer overflow and the execution of arbitrary code.
+
+If you use code, which is derived from a vulnerable lex grammar in an untrusted environment you need to regenerate your scanner with the fixed version of flex.
+
+The old stable distribution (woody) is not affected by this problem.
+
+For the stable distribution (sarge) this problem has been fixed in version 2.5.31-31sarge1.
+
+For the unstable distribution (sid) this problem has been fixed in version 2.5.33-1.
+
+We recommend that you upgrade your flex package.");
+
+  script_tag(name:"affected", value:"'flex' package(s) on Debian 3.1.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2012 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.70554");
+  script_cve_id("CVE-2011-3362", "CVE-2011-3504", "CVE-2011-3973", "CVE-2011-3974");
+  script_tag(name:"creation_date", value:"2012-02-11 07:28:41 +0000 (Sat, 11 Feb 2012)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"9.3");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
+
+  script_name("Debian: Security Advisory (DSA-2336)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2012 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-2336");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2011/dsa-2336");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'ffmpeg' package(s) announced via the DSA-2336 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Multiple vulnerabilities were found in FFmpeg, a multimedia player, server and encoder:
+
+CVE-2011-3362
+
+An integer signedness error in decode_residual_block function of the Chinese AVS video (CAVS) decoder in libavcodec can lead to denial of service (memory corruption and application crash) or possible code execution via a crafted CAVS file.
+
+CVE-2011-3973/CVE-2011-3974 Multiple errors in the Chinese AVS video (CAVS) decoder can lead to denial of service (memory corruption and application crash) via an invalid bitstream.
+
+CVE-2011-3504
+
+A memory allocation problem in the Matroska format decoder can lead to code execution via a crafted file.
+
+For the stable distribution (squeeze), this problem has been fixed in version 4:0.5.5-1.
+
+For the unstable distribution (sid), this problem has been fixed in version 4:0.7.2-1 of the libav source package.
+
+Security support for ffmpeg has been discontinued for the oldstable distribution (lenny) before in DSA 2306. The current version in oldstable is not supported by upstream anymore and is affected by several security issues. Backporting fixes for these and any future issues has become unfeasible and therefore we needed to drop our security support for the version in oldstable.
+
+We recommend that you upgrade your ffmpeg packages.");
+
+  script_tag(name:"affected", value:"'ffmpeg' package(s) on Debian 6.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

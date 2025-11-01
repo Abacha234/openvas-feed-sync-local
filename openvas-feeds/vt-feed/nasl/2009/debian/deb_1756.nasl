@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2009 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.63728");
+  script_cve_id("CVE-2009-1044", "CVE-2009-1169");
+  script_tag(name:"creation_date", value:"2009-04-06 18:58:11 +0000 (Mon, 06 Apr 2009)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"9.3");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
+
+  script_name("Debian: Security Advisory (DSA-1756)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2009 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-1756");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2009/dsa-1756");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'xulrunner' package(s) announced via the DSA-1756 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several remote vulnerabilities have been discovered in Xulrunner, a runtime environment for XUL applications, such as the Iceweasel web browser. The Common Vulnerabilities and Exposures project identifies the following problems:
+
+CVE-2009-1169
+
+Security researcher Guido Landi discovered that a XSL stylesheet could be used to crash the browser during a XSL transformation. An attacker could potentially use this crash to run arbitrary code on a victim's computer.
+
+CVE-2009-1044
+
+Security researcher Nils reported via TippingPoint's Zero Day Initiative that the XUL tree method _moveToEdgeShift was in some cases triggering garbage collection routines on objects which were still in use. In such cases, the browser would crash when attempting to access a previously destroyed object and this crash could be used by an attacker to run arbitrary code on a victim's computer.
+
+Note that after installing these updates, you will need to restart any packages using xulrunner, typically iceweasel or epiphany.
+
+As indicated in the Etch release notes, security support for the Mozilla products in the oldstable distribution needed to be stopped before the end of the regular Etch security maintenance life cycle. You are strongly encouraged to upgrade to stable or switch to a still supported browser.
+
+For the stable distribution (lenny), these problems have been fixed in version 1.9.0.7-0lenny2.
+
+For the unstable distribution (sid), these problems have been fixed in version 1.9.0.8-1
+
+We recommend that you upgrade your xulrunner package.");
+
+  script_tag(name:"affected", value:"'xulrunner' package(s) on Debian 5.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

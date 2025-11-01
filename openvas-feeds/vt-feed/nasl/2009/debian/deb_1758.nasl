@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2009 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.63730");
+  script_cve_id("CVE-2009-1073");
+  script_tag(name:"creation_date", value:"2009-04-06 18:58:11 +0000 (Mon, 06 Apr 2009)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"4.9");
+  script_tag(name:"cvss_base_vector", value:"AV:L/AC:L/Au:N/C:C/I:N/A:N");
+
+  script_name("Debian: Security Advisory (DSA-1758)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2009 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-1758");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2009/dsa-1758");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'nss-ldapd' package(s) announced via the DSA-1758 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Leigh James discovered that nss-ldapd, an NSS module for using LDAP as a naming service, by default creates the configuration file /etc/nss-ldapd.conf world-readable which could leak the configured LDAP password if one is used for connecting to the LDAP server.
+
+The old stable distribution (etch) doesn't contain nss-ldapd.
+
+For the stable distribution (lenny) this problem has been fixed in version 0.6.7.1.
+
+For the unstable distribution (sid) this problem has been fixed in version 0.6.8.
+
+We recommend that you upgrade your nss-ldapd package.");
+
+  script_tag(name:"affected", value:"'nss-ldapd' package(s) on Debian 5.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

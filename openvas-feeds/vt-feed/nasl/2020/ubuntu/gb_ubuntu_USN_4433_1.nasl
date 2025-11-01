@@ -1,0 +1,78 @@
+# SPDX-FileCopyrightText: 2020 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.844507");
+  script_cve_id("CVE-2020-14556", "CVE-2020-14562", "CVE-2020-14573", "CVE-2020-14577", "CVE-2020-14581", "CVE-2020-14583", "CVE-2020-14593", "CVE-2020-14621");
+  script_tag(name:"creation_date", value:"2020-07-24 03:00:25 +0000 (Fri, 24 Jul 2020)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"5.8");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:P/I:P/A:N");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2020-11-10 16:15:00 +0000 (Tue, 10 Nov 2020)");
+
+  script_name("Ubuntu: Security Advisory (USN-4433-1)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2020 Greenbone AG");
+  script_family("Ubuntu Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"USN-4433-1");
+  script_xref(name:"URL", value:"https://ubuntu.com/security/notices/USN-4433-1");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'openjdk-lts' package(s) announced via the USN-4433-1 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Johannes Kuhn discovered that OpenJDK incorrectly handled access control
+contexts. An attacker could possibly use this issue to execute arbitrary
+code. (CVE-2020-14556)
+
+It was discovered that OpenJDK incorrectly handled memory allocation when
+reading TIFF image files. An attacker could possibly use this issue to
+cause a denial of service. (CVE-2020-14562)
+
+It was discovered that OpenJDK incorrectly handled input data. An
+attacker could possibly use this issue to insert, edit or obtain
+sensitive information. (CVE-2020-14573)
+
+Philippe Arteau discovered that OpenJDK incorrectly verified names in
+TLS server's X.509 certificates. An attacker could possibly use this
+issue to obtain sensitive information. (CVE-2020-14577)
+
+It was discovered that OpenJDK incorrectly handled image files. An
+attacker could possibly use this issue to obtain sensitive information.
+(CVE-2020-14581)
+
+Markus Loewe discovered that OpenJDK incorrectly handled concurrent
+access in java.nio.Buffer class. An attacker could use this issue to
+bypass the sandbox restrictions and cause unspecified impact.
+(CVE-2020-14583)
+
+It was discovered that OpenJDK incorrectly handled transformation of
+images. An attacker could possibly use this issue to bypass sandbox
+restrictions and insert, edit or obtain sensitive information.
+(CVE-2020-14593)
+
+Roman Shemyakin discovered that OpenJDK incorrectly handled XML files.
+An attacker could possibly use this issue to insert, edit or obtain
+sensitive information. (CVE-2020-14621)");
+
+  script_tag(name:"affected", value:"'openjdk-lts' package(s) on Ubuntu 18.04, Ubuntu 20.04.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

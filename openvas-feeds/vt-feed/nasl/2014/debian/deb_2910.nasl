@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2014 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.702910");
+  script_cve_id("CVE-2014-0150");
+  script_tag(name:"creation_date", value:"2014-04-17 22:00:00 +0000 (Thu, 17 Apr 2014)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"4.9");
+  script_tag(name:"cvss_base_vector", value:"AV:A/AC:M/Au:S/C:P/I:P/A:P");
+
+  script_name("Debian: Security Advisory (DSA-2910)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2014 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-2910");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2014/dsa-2910");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'qemu-kvm' package(s) announced via the DSA-2910 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Michael S. Tsirkin of Red Hat discovered a buffer overflow flaw in the way qemu processed MAC addresses table update requests from the guest.
+
+A privileged guest user could use this flaw to corrupt qemu process memory on the host, which could potentially result in arbitrary code execution on the host with the privileges of the qemu process.
+
+For the oldstable distribution (squeeze), this problem has been fixed in version 0.12.5+dfsg-5+squeeze11.
+
+For the stable distribution (wheezy), this problem has been fixed in version 1.1.2+dfsg-6+deb7u1.
+
+We recommend that you upgrade your qemu-kvm packages.");
+
+  script_tag(name:"affected", value:"'qemu-kvm' package(s) on Debian 6, Debian 7.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

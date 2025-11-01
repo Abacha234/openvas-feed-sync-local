@@ -1,0 +1,78 @@
+# SPDX-FileCopyrightText: 2021 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+CPE = "cpe:/a:redis:redis";
+
+if (description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.146847");
+  script_version("2025-10-10T05:39:02+0000");
+  script_tag(name:"last_modification", value:"2025-10-10 05:39:02 +0000 (Fri, 10 Oct 2025)");
+  script_tag(name:"creation_date", value:"2021-10-06 12:40:22 +0000 (Wed, 06 Oct 2021)");
+  script_tag(name:"cvss_base", value:"6.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:S/C:P/I:P/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2021-10-13 16:04:00 +0000 (Wed, 13 Oct 2021)");
+
+  script_cve_id("CVE-2021-32626");
+
+  script_tag(name:"qod_type", value:"remote_banner_unreliable");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+
+  script_name("Redis Stack Overflow Vulnerability (GHSA-p486-xggp-782c)");
+
+  script_category(ACT_GATHER_INFO);
+
+  script_copyright("Copyright (C) 2021 Greenbone AG");
+  script_family("Databases");
+  script_dependencies("gb_redis_tcp_detect.nasl");
+  script_mandatory_keys("redis/detected");
+
+  script_tag(name:"summary", value:"Redis is prone to a heap-based stack overflow vulnerability.");
+
+  script_tag(name:"insight", value:"Specially crafted Lua scripts executing in Redis can cause the
+  heap-based Lua stack to be overflowed, due to incomplete checks for this condition. This can
+  result with heap corruption and potentially remote code execution.");
+
+  script_tag(name:"affected", value:"Redis version 2.6 and later.");
+
+  script_tag(name:"solution", value:"Update to version 5.0.14, 6.0.16, 6.2.6 or later.");
+
+  script_xref(name:"URL", value:"https://github.com/redis/redis/security/advisories/GHSA-p486-xggp-782c");
+
+  exit(0);
+}
+
+include("host_details.inc");
+include("version_func.inc");
+
+if (!port = get_app_port(cpe: CPE))
+  exit(0);
+
+if (!version = get_app_version(cpe: CPE, port: port))
+  exit(0);
+
+if (version_in_range(version: version, test_version: "2.6", test_version2: "5.0.13")) {
+  report = report_fixed_ver(installed_version: version, fixed_version: "5.0.14");
+  security_message(port: port, data: report);
+  exit(0);
+}
+
+if (version_in_range(version: version, test_version: "6.0", test_version2: "6.0.15")) {
+  report = report_fixed_ver(installed_version: version, fixed_version: "6.0.16");
+  security_message(port: port, data: report);
+  exit(0);
+}
+
+if (version_in_range(version: version, test_version: "6.1", test_version2: "6.2.5")) {
+  report = report_fixed_ver(installed_version: version, fixed_version: "6.2.6");
+  security_message(port: port, data: report);
+  exit(0);
+}
+
+exit(99);

@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: 2018 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.891578");
+  script_cve_id("CVE-2016-1238", "CVE-2017-15705", "CVE-2018-11780", "CVE-2018-11781");
+  script_tag(name:"creation_date", value:"2018-11-14 23:00:00 +0000 (Wed, 14 Nov 2018)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2019-08-06 21:15:00 +0000 (Tue, 06 Aug 2019)");
+
+  script_name("Debian: Security Advisory (DLA-1578)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2018 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-1578");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2018/dla-1578");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'spamassassin' package(s) announced via the DLA-1578 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Multiple vulnerabilities were found in Spamassassin, which could lead to Remote Code Execution and Denial of Service attacks under certain circumstances.
+
+CVE-2016-1238
+
+Many Perl programs do not properly remove . (period) characters from the end of the includes directory array, which might allow local users to gain privileges via a Trojan horse module under the current working directory.
+
+CVE-2017-15705
+
+A denial of service vulnerability was identified that exists in Apache SpamAssassin before 3.4.2. The vulnerability arises with certain unclosed tags in emails that cause markup to be handled incorrectly leading to scan timeouts. This can cause carefully crafted emails that might take more scan time than expected leading to a Denial of Service.
+
+CVE-2018-11780
+
+A potential Remote Code Execution bug exists with the PDFInfo plugin in Apache SpamAssassin before 3.4.2.
+
+CVE-2018-11781
+
+Apache SpamAssassin 3.4.2 fixes a local user code injection in the meta rule syntax.
+
+For Debian 8 Jessie, these problems have been fixed in version 3.4.2-0+deb8u1. Upstream strongly advocates upgrading to the latest upstream version so we are following that recommendation and backported the version published as part of the 9.6 stretch release, which also fixes many critical bugs.
+
+We recommend that you upgrade your spamassassin packages.
+
+Further information about Debian LTS security advisories, how to apply these updates to your system and frequently asked questions can be found at: [link moved to references]");
+
+  script_tag(name:"affected", value:"'spamassassin' package(s) on Debian 8.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

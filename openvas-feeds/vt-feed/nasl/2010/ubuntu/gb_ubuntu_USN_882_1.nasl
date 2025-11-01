@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2010 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.840366");
+  script_cve_id("CVE-2009-2626", "CVE-2009-4142", "CVE-2009-4143");
+  script_tag(name:"creation_date", value:"2010-01-19 07:58:46 +0000 (Tue, 19 Jan 2010)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"10.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
+
+  script_name("Ubuntu: Security Advisory (USN-882-1)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2010 Greenbone AG");
+  script_family("Ubuntu Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"USN-882-1");
+  script_xref(name:"URL", value:"https://ubuntu.com/security/notices/USN-882-1");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'php5' package(s) announced via the USN-882-1 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Maksymilian Arciemowicz discovered that PHP did not properly handle the
+ini_restore function. An attacker could exploit this issue to obtain
+random memory contents or to cause the PHP server to crash, resulting in a
+denial of service. (CVE-2009-2626)
+
+It was discovered that the htmlspecialchars function did not properly
+handle certain character sequences, which could result in browsers becoming
+vulnerable to cross-site scripting attacks when processing the output. With
+cross-site scripting vulnerabilities, if a user were tricked into viewing
+server output during a crafted server request, a remote attacker could
+exploit this to modify the contents, or steal confidential data (such as
+passwords), within the same domain. (CVE-2009-4142)
+
+Stefan Esser discovered that PHP did not properly handle session data. An
+attacker could exploit this issue to bypass safe_mode or open_basedir
+restrictions. (CVE-2009-4143)");
+
+  script_tag(name:"affected", value:"'php5' package(s) on Ubuntu 6.06, Ubuntu 8.04, Ubuntu 8.10, Ubuntu 9.04, Ubuntu 9.10.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

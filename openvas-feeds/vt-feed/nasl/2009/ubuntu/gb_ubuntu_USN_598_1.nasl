@@ -1,0 +1,66 @@
+# SPDX-FileCopyrightText: 2009 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.840310");
+  script_cve_id("CVE-2008-0047", "CVE-2008-0053", "CVE-2008-0882", "CVE-2008-1373");
+  script_tag(name:"creation_date", value:"2009-03-23 09:59:50 +0000 (Mon, 23 Mar 2009)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"10.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
+
+  script_name("Ubuntu: Security Advisory (USN-598-1)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2009 Greenbone AG");
+  script_family("Ubuntu Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"USN-598-1");
+  script_xref(name:"URL", value:"https://ubuntu.com/security/notices/USN-598-1");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'cupsys' package(s) announced via the USN-598-1 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"It was discovered that the CUPS administration interface contained a heap-
+based overflow flaw. A local attacker, and a remote attacker if printer
+sharing is enabled, could send a malicious request and possibly execute
+arbitrary code as the non-root user in Ubuntu 6.06 LTS, 6.10, and 7.04.
+In Ubuntu 7.10, attackers would be isolated by the AppArmor CUPS profile.
+(CVE-2008-0047)
+
+It was discovered that the hpgl filter in CUPS did not properly validate
+its input when parsing parameters. If a crafted HP-GL/2 file were printed,
+an attacker could possibly execute arbitrary code as the non-root user
+in Ubuntu 6.06 LTS, 6.10, and 7.04. In Ubuntu 7.10, attackers would be
+isolated by the AppArmor CUPS profile. (CVE-2008-0053)
+
+It was discovered that CUPS had a flaw in its managing of remote shared
+printers via IPP. A remote attacker could send a crafted UDP packet and
+cause a denial of service or possibly execute arbitrary code as the
+non-root user in Ubuntu 6.06 LTS, 6.10, and 7.04. In Ubuntu 7.10,
+attackers would be isolated by the AppArmor CUPS profile. (CVE-2008-0882)
+
+It was discovered that CUPS did not properly perform bounds checking in
+its GIF decoding routines. If a crafted GIF file were printed, an attacker
+could possibly execute arbitrary code as the non-root user in Ubuntu 6.06
+LTS, 6.10, and 7.04. In Ubuntu 7.10, attackers would be isolated by the
+AppArmor CUPS profile. (CVE-2008-1373)");
+
+  script_tag(name:"affected", value:"'cupsys' package(s) on Ubuntu 6.06, Ubuntu 6.10, Ubuntu 7.04, Ubuntu 7.10.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

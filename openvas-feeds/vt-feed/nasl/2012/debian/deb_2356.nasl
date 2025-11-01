@@ -1,0 +1,99 @@
+# SPDX-FileCopyrightText: 2012 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.70570");
+  script_xref(name:"CISA", value:"Known Exploited Vulnerability (KEV) catalog");
+  script_xref(name:"URL", value:"https://www.cisa.gov/known-exploited-vulnerabilities-catalog");
+  script_cve_id("CVE-2011-3389", "CVE-2011-3521", "CVE-2011-3544", "CVE-2011-3547", "CVE-2011-3548", "CVE-2011-3551", "CVE-2011-3552", "CVE-2011-3553", "CVE-2011-3554", "CVE-2011-3556", "CVE-2011-3557", "CVE-2011-3560");
+  script_tag(name:"creation_date", value:"2012-02-11 07:33:35 +0000 (Sat, 11 Feb 2012)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"10.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
+
+  script_name("Debian: Security Advisory (DSA-2356)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2012 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-2356");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2011/dsa-2356");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'openjdk-6' package(s) announced via the DSA-2356 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities have been discovered in OpenJDK, an implementation of the Java platform:
+
+CVE-2011-3389
+
+The TLS implementation does not guard properly against certain chosen-plaintext attacks when block ciphers are used in CBC mode.
+
+CVE-2011-3521
+
+The CORBA implementation contains a deserialization vulnerability in the IIOP implementation, allowing untrusted Java code (such as applets) to elevate its privileges.
+
+CVE-2011-3544
+
+The Java scripting engine lacks necessary security manager checks, allowing untrusted Java code (such as applets) to elevate its privileges.
+
+CVE-2011-3547
+
+The skip() method in java.io.InputStream uses a shared buffer, allowing untrusted Java code (such as applets) to access data that is skipped by other code.
+
+CVE-2011-3548
+
+The java.awt.AWTKeyStroke class contains a flaw which allows untrusted Java code (such as applets) to elevate its privileges.
+
+CVE-2011-3551
+
+The Java2D C code contains an integer overflow which results in a heap-based buffer overflow, potentially allowing untrusted Java code (such as applets) to elevate its privileges.
+
+CVE-2011-3552
+
+Malicious Java code can use up an excessive amount of UDP ports, leading to a denial of service.
+
+CVE-2011-3553
+
+JAX-WS enables stack traces for certain server responses by default, potentially leaking sensitive information.
+
+CVE-2011-3554
+
+JAR files in pack200 format are not properly checked for errors, potentially leading to arbitrary code execution when unpacking crafted pack200 files.
+
+CVE-2011-3556
+
+The RMI Registry server lacks access restrictions on certain methods, allowing a remote client to execute arbitrary code.
+
+CVE-2011-3557
+
+The RMI Registry server fails to properly restrict privileges of untrusted Java code, allowing RMI clients to elevate their privileges on the RMI Registry server.
+
+CVE-2011-3560
+
+The com.sun.net.ssl.HttpsURLConnection class does not perform proper security manager checks in the setSSLSocketFactory() method, allowing untrusted Java code to bypass security policy restrictions.
+
+For the stable distribution (squeeze), this problem has been fixed in version 6b18-1.8.10-0+squeeze2.
+
+For the testing distribution (wheezy) and the unstable distribution (sid), this problem has been fixed in version 6b23~pre11-1.
+
+We recommend that you upgrade your openjdk-6 packages.");
+
+  script_tag(name:"affected", value:"'openjdk-6' package(s) on Debian 6.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

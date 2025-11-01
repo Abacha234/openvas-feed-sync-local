@@ -1,0 +1,65 @@
+# SPDX-FileCopyrightText: 2012 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.71862");
+  script_cve_id("CVE-2012-3527", "CVE-2012-3528", "CVE-2012-3529", "CVE-2012-3530", "CVE-2012-3531");
+  script_tag(name:"creation_date", value:"2012-09-07 15:46:25 +0000 (Fri, 07 Sep 2012)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"4.6");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:H/Au:S/C:P/I:P/A:P");
+
+  script_name("Debian: Security Advisory (DSA-2537)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2012 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-2537");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2012/dsa-2537");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'typo3-src' package(s) announced via the DSA-2537 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities were discovered in TYPO3, a content management system.
+
+CVE-2012-3527
+
+An insecure call to unserialize in the help system enables arbitrary code execution by authenticated users.
+
+CVE-2012-3528
+
+The TYPO3 backend contains several cross-site scripting vulnerabilities.
+
+CVE-2012-3529
+
+Authenticated users who can access the configuration module can obtain the encryption key, allowing them to escalate their privileges.
+
+CVE-2012-3530
+
+The RemoveXSS HTML sanitizer did not remove several HTML5 JavaScript, thus failing to mitigate the impact of cross-site scripting vulnerabilities.
+
+For the stable distribution (squeeze), these problems have been fixed in version 4.3.9+dfsg1-1+squeeze5.
+
+For the testing distribution (wheezy) and the unstable distribution (sid), these problems have been fixed in version 4.5.19+dfsg1-1.
+
+We recommend that you upgrade your typo3-src packages.");
+
+  script_tag(name:"affected", value:"'typo3-src' package(s) on Debian 6.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

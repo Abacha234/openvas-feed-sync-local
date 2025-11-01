@@ -1,0 +1,78 @@
+# SPDX-FileCopyrightText: 2021 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.892661");
+  script_cve_id("CVE-2017-9735", "CVE-2018-12536", "CVE-2019-10241", "CVE-2019-10247", "CVE-2020-27216");
+  script_tag(name:"creation_date", value:"2021-05-15 03:00:41 +0000 (Sat, 15 May 2021)");
+  script_version("2024-01-19T05:06:17+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:17 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"5.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:N/A:N");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2022-03-15 14:55:00 +0000 (Tue, 15 Mar 2022)");
+
+  script_name("Debian: Security Advisory (DLA-2661)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2021 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DLA-2661");
+  script_xref(name:"URL", value:"https://www.debian.org/lts/security/2021/dla-2661");
+  script_xref(name:"URL", value:"https://security-tracker.debian.org/tracker/jetty9");
+  script_xref(name:"URL", value:"https://wiki.debian.org/LTS");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'jetty9' package(s) announced via the DLA-2661 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities were discovered in jetty, a Java servlet engine and webserver. An attacker may reveal cryptographic credentials such as passwords to a local user, disclose installation paths, hijack user sessions or tamper with collocated webapps.
+
+CVE-2017-9735
+
+Jetty is prone to a timing channel in util/security/Password.java, which makes it easier for remote attackers to obtain access by observing elapsed times before rejection of incorrect passwords.
+
+CVE-2018-12536
+
+On webapps deployed using default Error Handling, when an intentionally bad query arrives that doesn't match a dynamic url-pattern, and is eventually handled by the DefaultServlet's static file serving, the bad characters can trigger a java.nio.file.InvalidPathException which includes the full path to the base resource directory that the DefaultServlet and/or webapp is using. If this InvalidPathException is then handled by the default Error Handler, the InvalidPathException message is included in the error response, revealing the full server path to the requesting system.
+
+CVE-2019-10241
+
+The server is vulnerable to XSS conditions if a remote client USES a specially formatted URL against the DefaultServlet or ResourceHandler that is configured for showing a Listing of directory contents.
+
+CVE-2019-10247
+
+The server running on any OS and Jetty version combination will reveal the configured fully qualified directory base resource location on the output of the 404 error for not finding a Context that matches the requested path. The default server behavior on jetty-distribution and jetty-home will include at the end of the Handler tree a DefaultHandler, which is responsible for reporting this 404 error, it presents the various configured contexts as HTML for users to click through to. This produced HTML includes output that contains the configured fully qualified directory base resource location for each context.
+
+CVE-2020-27216
+
+On Unix like systems, the system's temporary directory is shared between all users on that system. A collocated user can observe the process of creating a temporary sub directory in the shared temporary directory and race to complete the creation of the temporary subdirectory. If the attacker wins the race then they will have read and write permission to the subdirectory used to unpack web applications, including their WEB-INF/lib jar files and JSP files. If any code is ever executed out of this temporary directory, this can lead to a local privilege escalation vulnerability.
+
+This update also includes several other bug fixes and improvements. For more information please refer to the upstream changelog file.
+
+For Debian 9 stretch, these problems have been fixed in version 9.2.30-0+deb9u1.
+
+We recommend that you upgrade your jetty9 packages.
+
+For the detailed security status of jetty9 please refer to its security tracker page at: [link moved to references]
+
+Further ... [Please see the references for more information on the vulnerabilities]");
+
+  script_tag(name:"affected", value:"'jetty9' package(s) on Debian 9.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

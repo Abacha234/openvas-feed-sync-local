@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2022 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.845400");
+  script_cve_id("CVE-2021-46790", "CVE-2022-30783", "CVE-2022-30784", "CVE-2022-30785", "CVE-2022-30786", "CVE-2022-30787", "CVE-2022-30788", "CVE-2022-30789");
+  script_tag(name:"creation_date", value:"2022-06-08 01:00:32 +0000 (Wed, 08 Jun 2022)");
+  script_version("2024-01-19T05:06:18+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:18 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"7.5");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:P/I:P/A:P");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2022-05-09 19:09:00 +0000 (Mon, 09 May 2022)");
+
+  script_name("Ubuntu: Security Advisory (USN-5463-1)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2022 Greenbone AG");
+  script_family("Ubuntu Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"USN-5463-1");
+  script_xref(name:"URL", value:"https://ubuntu.com/security/notices/USN-5463-1");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'ntfs-3g' package(s) announced via the USN-5463-1 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"It was discovered that NTFS-3G incorrectly handled the ntfsck tool. If a
+user or automated system were tricked into using ntfsck on a specially
+crafted disk image, a remote attacker could possibly use this issue to
+execute arbitrary code. (CVE-2021-46790)
+
+Roman Fiedler discovered that NTFS-3G incorrectly handled certain return
+codes. A local attacker could possibly use this issue to intercept
+protocol traffic between FUSE and the kernel. (CVE-2022-30783)
+
+It was discovered that NTFS-3G incorrectly handled certain NTFS disk
+images. If a user or automated system were tricked into mounting a
+specially crafted disk image, a remote attacker could use this issue to
+cause a denial of service, or possibly execute arbitrary code.
+(CVE-2022-30784, CVE-2022-30786, CVE-2022-30788, CVE-2022-30789)
+
+Roman Fiedler discovered that NTFS-3G incorrectly handled certain file
+handles. A local attacker could possibly use this issue to read and write
+arbitrary memory. (CVE-2022-30785, CVE-2022-30787)");
+
+  script_tag(name:"affected", value:"'ntfs-3g' package(s) on Ubuntu 18.04, Ubuntu 20.04, Ubuntu 21.10, Ubuntu 22.04.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

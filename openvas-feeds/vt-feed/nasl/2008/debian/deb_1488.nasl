@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: 2008 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.60361");
+  script_cve_id("CVE-2006-4758", "CVE-2006-6508", "CVE-2006-6839", "CVE-2006-6840", "CVE-2006-6841", "CVE-2008-0471");
+  script_tag(name:"creation_date", value:"2008-02-15 22:29:21 +0000 (Fri, 15 Feb 2008)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"10.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
+
+  script_name("Debian: Security Advisory (DSA-1488)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2008 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-1488");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2008/dsa-1488");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'phpbb2' package(s) announced via the DSA-1488 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several remote vulnerabilities have been discovered in phpBB, a web based bulletin board. The Common Vulnerabilities and Exposures project identifies the following problems:
+
+CVE-2008-0471
+
+Private messaging allowed cross site request forgery, making it possible to delete all private messages of a user by sending them to a crafted web page.
+
+CVE-2006-6841 / CVE-2006-6508 Cross site request forgery enabled an attacker to perform various actions on behalf of a logged in user. (Applies to sarge only.)
+
+CVE-2006-6840
+
+A negative start parameter could allow an attacker to create invalid output. (Applies to sarge only.)
+
+CVE-2006-6839
+
+Redirection targets were not fully checked, leaving room for unauthorised external redirections via a phpBB forum. (Applies to sarge only.)
+
+CVE-2006-4758
+
+An authenticated forum administrator may upload files of any type by using specially crafted filenames. (Applies to sarge only.)
+
+For the old stable distribution (sarge), these problems have been fixed in version 2.0.13+1-6sarge4.
+
+For the stable distribution (etch), these problems have been fixed in version 2.0.21-7.
+
+For the unstable distribution (sid) these problems have been fixed in version 2.0.22-3.
+
+We recommend that you upgrade your phpbb2 package.");
+
+  script_tag(name:"affected", value:"'phpbb2' package(s) on Debian 3.1, Debian 4.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

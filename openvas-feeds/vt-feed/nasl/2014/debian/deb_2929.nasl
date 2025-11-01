@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2014 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.702929");
+  script_xref(name:"CISA", value:"Known Exploited Vulnerability (KEV) catalog");
+  script_xref(name:"URL", value:"https://www.cisa.gov/known-exploited-vulnerabilities-catalog");
+  script_cve_id("CVE-2014-0081", "CVE-2014-0082", "CVE-2014-0130");
+  script_tag(name:"creation_date", value:"2014-05-15 22:00:00 +0000 (Thu, 15 May 2014)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"5.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:N/A:P");
+
+  script_name("Debian: Security Advisory (DSA-2929)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2014 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-2929");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2014/dsa-2929");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'ruby-actionpack-3.2' package(s) announced via the DSA-2929 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities were discovered in Action Pack, a component of Ruby on Rails.
+
+CVE-2014-0081
+
+actionview/lib/action_view/helpers/number_helper.rb contains multiple cross-site scripting vulnerabilities
+
+CVE-2014-0082
+
+actionpack/lib/action_view/template/text.rb performs symbol interning on MIME type strings, allowing remote denial-of-service attacks via increased memory consumption.
+
+CVE-2014-0130
+
+A directory traversal vulnerability in actionpack/lib/abstract_controller/base.rb allows remote attackers to read arbitrary files.
+
+For the stable distribution (wheezy), these problems have been fixed in version 3.2.6-6+deb7u2.
+
+We recommend that you upgrade your ruby-actionpack-3.2 packages.");
+
+  script_tag(name:"affected", value:"'ruby-actionpack-3.2' package(s) on Debian 7.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2009 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.63960");
+  script_cve_id("CVE-2009-1086");
+  script_tag(name:"creation_date", value:"2009-05-11 18:24:31 +0000 (Mon, 11 May 2009)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"6.4");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:N/I:P/A:P");
+
+  script_name("Debian: Security Advisory (DSA-1795)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2009 Greenbone AG");
+  script_family("Debian Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"DSA-1795");
+  script_xref(name:"URL", value:"https://www.debian.org/security/2009/dsa-1795");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the Debian 'ldns' package(s) announced via the DSA-1795 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Stefan Kaltenbrunner discovered that ldns, a library and set of utilities to facilitate DNS programming, did not correctly implement a buffer boundary check in its RR DNS record parser. This weakness could enable overflow of a heap buffer if a maliciously-crafted record is parsed, potentially allowing the execution of arbitrary code. The scope of compromise will vary with the context in which ldns is used, and could present either a local or remote attack vector.
+
+The old stable distribution (etch) is not affected by this issue.
+
+For the stable distribution (lenny), this problem has been fixed in version 1.4.0-1+lenny1.
+
+For the unstable distribution (sid), this problem was fixed in version 1.5.1-1.
+
+We recommend that you upgrade your ldns packages.");
+
+  script_tag(name:"affected", value:"'ldns' package(s) on Debian 5.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

@@ -1,0 +1,66 @@
+# SPDX-FileCopyrightText: 2025 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.856909");
+  script_version("2025-02-20T08:47:14+0000");
+  script_cve_id("CVE-2024-47538", "CVE-2024-47541", "CVE-2024-47542", "CVE-2024-47600", "CVE-2024-47607", "CVE-2024-47615", "CVE-2024-47835");
+  script_tag(name:"cvss_base", value:"10.0");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:L/Au:N/C:C/I:C/A:C");
+  script_tag(name:"last_modification", value:"2025-02-20 08:47:14 +0000 (Thu, 20 Feb 2025)");
+  script_tag(name:"severity_vector", value:"CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H");
+  script_tag(name:"severity_origin", value:"NVD");
+  script_tag(name:"severity_date", value:"2024-12-18 19:57:16 +0000 (Wed, 18 Dec 2024)");
+  script_tag(name:"creation_date", value:"2025-01-11 05:00:09 +0000 (Sat, 11 Jan 2025)");
+  script_name("openSUSE: Security Advisory for gstreamer (SUSE-SU-2025:0069-1)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2025 Greenbone AG");
+  script_family("SuSE Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"SUSE-SU-2025:0069-1");
+  script_xref(name:"URL", value:"https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/BUKXU7D73HX7CQRDDBFEG7DOYTL345VF");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'gstreamer'
+  package(s) announced via the SUSE-SU-2025:0069-1 advisory.
+Note: This VT has been deprecated and replaced by a Notus scanner based one.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"This update for gstreamer-plugins-base fixes the following issues:
+
+  * CVE-2024-47538: Fixed a stack-buffer overflow in
+      vorbis_handle_identification_packet. (bsc#1234415)
+
+  * CVE-2024-47835: Fixed a NULL-pointer dereference in LRC subtitle parser.
+      (bsc#1234450)
+
+  * CVE-2024-47600: Fixed an out-of-bounds read in gst-discoverer-1.0
+      commandline tool. (bsc#1234453)
+
+  * CVE-2024-47615: Fixed an out-of-bounds write in Ogg demuxer. (bsc#1234456)
+
+  * CVE-2024-47541: Fixed an out-of-bounds write in SSA subtitle parser.
+      (bsc#1234459)
+
+  * CVE-2024-47542: Fixed an ID3v2 parser out-of-bounds read and NULL-pointer
+      dereference. (bsc#1234460)
+
+  * CVE-2024-47607: Fixed a stack buffer-overflow in Opus decoder. (bsc#1234455)");
+
+  script_tag(name:"affected", value:"'gstreamer' package(s) on openSUSE Leap 15.4.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);

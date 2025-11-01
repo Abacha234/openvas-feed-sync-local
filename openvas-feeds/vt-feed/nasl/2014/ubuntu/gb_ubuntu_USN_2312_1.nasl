@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2014 Greenbone AG
+# Some text descriptions might be excerpted from (a) referenced
+# source(s), and are Copyright (C) by the respective right holder(s).
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+if(description)
+{
+  script_oid("1.3.6.1.4.1.25623.1.0.841928");
+  script_cve_id("CVE-2014-2490", "CVE-2014-4209", "CVE-2014-4216", "CVE-2014-4218", "CVE-2014-4219", "CVE-2014-4244", "CVE-2014-4252", "CVE-2014-4262", "CVE-2014-4263", "CVE-2014-4266", "CVE-2014-4268");
+  script_tag(name:"creation_date", value:"2014-08-13 03:56:30 +0000 (Wed, 13 Aug 2014)");
+  script_version("2024-01-19T05:06:16+0000");
+  script_tag(name:"last_modification", value:"2024-01-19 05:06:16 +0000 (Fri, 19 Jan 2024)");
+  script_tag(name:"cvss_base", value:"9.3");
+  script_tag(name:"cvss_base_vector", value:"AV:N/AC:M/Au:N/C:C/I:C/A:C");
+
+  script_name("Ubuntu: Security Advisory (USN-2312-1)");
+  script_category(ACT_GATHER_INFO);
+  script_copyright("Copyright (C) 2014 Greenbone AG");
+  script_family("Ubuntu Local Security Checks");
+
+  script_xref(name:"Advisory-ID", value:"USN-2312-1");
+  script_xref(name:"URL", value:"https://ubuntu.com/security/notices/USN-2312-1");
+
+  script_tag(name:"summary", value:"The remote host is missing an update for the 'openjdk-6' package(s) announced via the USN-2312-1 advisory.");
+
+  script_tag(name:"vuldetect", value:"Checks if a vulnerable package version is present on the target host.");
+
+  script_tag(name:"insight", value:"Several vulnerabilities were discovered in the OpenJDK JRE related to
+information disclosure, data integrity and availability. An attacker could
+exploit these to cause a denial of service or expose sensitive data over
+the network. (CVE-2014-2490, CVE-2014-4216, CVE-2014-4219, CVE-2014-4262)
+
+Several vulnerabilities were discovered in the OpenJDK JRE related to
+information disclosure and data integrity. An attacker could exploit these
+to expose sensitive data over the network. (CVE-2014-4209, CVE-2014-4244,
+CVE-2014-4263)
+
+Two vulnerabilities were discovered in the OpenJDK JRE related to data
+integrity. (CVE-2014-4218, CVE-2014-4266)
+
+Two vulnerabilities were discovered in the OpenJDK JRE related to
+information disclosure. An attacker could exploit these to expose sensitive
+data over the network. (CVE-2014-4252, CVE-2014-4268)");
+
+  script_tag(name:"affected", value:"'openjdk-6' package(s) on Ubuntu 10.04, Ubuntu 12.04.");
+
+  script_tag(name:"solution", value:"Please install the updated package(s).");
+
+  script_tag(name:"solution_type", value:"VendorFix");
+  script_tag(name:"qod_type", value:"package");
+
+  script_tag(name:"deprecated", value:TRUE);
+
+  exit(0);
+}
+
+exit(66);
