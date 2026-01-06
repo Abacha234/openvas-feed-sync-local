@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dfncert="http://www.dfn-cert.de/dfncert.dtd">
+  <entry>
+    <title>MediaWiki: Mehrere Schwachstellen ermöglichen u. a. das Ausführen beliebigen Programmcodes</title>
+    <link href="https://adv-archiv.dfn-cert.de/adv/2026-0001/" rel="alternate"/>
+    <updated>2026-01-02T09:09:10+01:00</updated>
+    <id>https://adv-archiv.dfn-cert.de/adv/2026-0001/</id>
+    <summary type="html">Ein Angreifer kann mehrere Schwachstellen aus der Ferne ausnutzen, um Informationen auszuspähen, beliebigen Programmcode auszuführen und nicht spezifizierte Angriffe durchzuführen.
+
+Für die Ausnutzung der Schwachstellen sind keine Privilegien erforderlich.
+
+Für Debian 11 Bullseye (LTS) steht Version 1:1.35.13-1+deb11u6 von 'mediawiki' bereit, um sieben Schwachstellen zu beheben.</summary>
+    <dfncert:cve>CVE-2025-67475</dfncert:cve>
+    <dfncert:cve>CVE-2025-67478</dfncert:cve>
+    <dfncert:cve>CVE-2025-67479</dfncert:cve>
+    <dfncert:cve>CVE-2025-67480</dfncert:cve>
+    <dfncert:cve>CVE-2025-67481</dfncert:cve>
+    <dfncert:cve>CVE-2025-67482</dfncert:cve>
+    <dfncert:cve>CVE-2025-67484</dfncert:cve>
+    <published>2026-01-02T06:59:55+01:00</published>
+    <dfncert:refnum>DFN-CERT-2026-0001</dfncert:refnum>
+    <dfncert:version>1</dfncert:version>
+  </entry>
+  <entry>
+    <title>ImageMagick: Mehrere Schwachstellen ermöglichen u. a. das Ausspähen von Informationen</title>
+    <link href="https://adv-archiv.dfn-cert.de/adv/2026-0002/" rel="alternate"/>
+    <updated>2026-01-02T11:19:48+01:00</updated>
+    <id>https://adv-archiv.dfn-cert.de/adv/2026-0002/</id>
+    <summary type="html">Ein Angreifer kann mehrere Schwachstellen aus der Ferne ausnutzen, um Informationen auszuspähen und Denial-of-Service (DoS)-Angriffe durchzuführen. Zudem kann ein Angreifer mehrere Schwachstellen lokal ausnutzen, um Denial-of-Service (DoS)-Angriffe durchzuführen.
+
+Für die Ausnutzung der Schwachstellen sind keine Privilegien erforderlich. Eine Schwachstelle erfordert die Interaktion eines Benutzers.
+
+Für Debian 11 Bullseye (LTS) steht Version 8:6.9.11.60+dfsg-1.3+deb11u8 von 'imagemagick' bereit, um sechs Schwachstellen zu beheben.</summary>
+    <dfncert:cve>CVE-2025-65955</dfncert:cve>
+    <dfncert:cve>CVE-2025-66628</dfncert:cve>
+    <dfncert:cve>CVE-2025-68469</dfncert:cve>
+    <dfncert:cve>CVE-2025-68618</dfncert:cve>
+    <dfncert:cve>CVE-2025-68950</dfncert:cve>
+    <dfncert:cve>CVE-2025-69204</dfncert:cve>
+    <published>2026-01-02T07:02:24+01:00</published>
+    <dfncert:refnum>DFN-CERT-2026-0002</dfncert:refnum>
+    <dfncert:version>1</dfncert:version>
+  </entry>
+  <entry>
+    <title>Net-SNMP: Eine Schwachstelle ermöglicht u. a. einen Denial-of-Service-Angriff</title>
+    <link href="https://adv-archiv.dfn-cert.de/adv/2026-0003/" rel="alternate"/>
+    <updated>2026-01-02T09:17:39+01:00</updated>
+    <id>https://adv-archiv.dfn-cert.de/adv/2026-0003/</id>
+    <summary type="html">Ein Angreifer kann eine Schwachstelle aus der Ferne ausnutzen, um einen Denial-of-Service (DoS)-Angriff durchzuführen und möglicherweise weitere Angriffe durchzuführen.
+
+Für die Ausnutzung der Schwachstelle sind keine Privilegien erforderlich.
+
+Für Debian 11 Bullseye (LTS) steht Version 5.9+dfsg-4+deb11u3 von 'net-snmp' bereit, um die Schwachstelle zu beheben.</summary>
+    <dfncert:cve>CVE-2025-68615</dfncert:cve>
+    <published>2026-01-02T07:06:04+01:00</published>
+    <dfncert:refnum>DFN-CERT-2026-0003</dfncert:refnum>
+    <dfncert:version>1</dfncert:version>
+  </entry>
+  <entry>
+    <title>Trivy: Mehrere Schwachstellen ermöglichen u. a. das Ausführen beliebigen Programmcodes</title>
+    <link href="https://adv-archiv.dfn-cert.de/adv/2026-0004/" rel="alternate"/>
+    <updated>2026-01-02T09:06:02+01:00</updated>
+    <id>https://adv-archiv.dfn-cert.de/adv/2026-0004/</id>
+    <summary type="html">Ein Angreifer kann mehrere Schwachstellen aus der Ferne ausnutzen, um Informationen auszuspähen, Sicherheitsvorkehrungen zu umgehen, beliebigen Programmcode auszuführen und Denial-of-Service (DoS)-Angriffe durchzuführen. Zudem kann ein Angreifer eine Schwachstelle lokal ausnutzen, um beliebigen Programmcode auszuführen.
+
+Für die Ausnutzung der meisten Schwachstellen sind keine Privilegien erforderlich. Zwei Schwachstellen erfordern die Interaktion eines Benutzers. Die erfolgreiche Ausnutzung zweier Schwachstellen kann Einfluss auf andere Komponenten haben.
+
+Für openSUSE Backports SLE 15 SP6 und 15 SP7 stehen Sicherheitsupdates für 'trivy' bereit, um 14 Schwachstellen zu beheben.</summary>
+    <dfncert:cve>CVE-2025-11065</dfncert:cve>
+    <dfncert:cve>CVE-2025-22868</dfncert:cve>
+    <dfncert:cve>CVE-2025-22869</dfncert:cve>
+    <dfncert:cve>CVE-2025-22872</dfncert:cve>
+    <dfncert:cve>CVE-2025-30204</dfncert:cve>
+    <dfncert:cve>CVE-2025-46569</dfncert:cve>
+    <dfncert:cve>CVE-2025-47291</dfncert:cve>
+    <dfncert:cve>CVE-2025-47911</dfncert:cve>
+    <dfncert:cve>CVE-2025-47913</dfncert:cve>
+    <dfncert:cve>CVE-2025-47914</dfncert:cve>
+    <dfncert:cve>CVE-2025-53547</dfncert:cve>
+    <dfncert:cve>CVE-2025-58058</dfncert:cve>
+    <dfncert:cve>CVE-2025-58181</dfncert:cve>
+    <dfncert:cve>CVE-2025-58190</dfncert:cve>
+    <published>2026-01-02T07:08:57+01:00</published>
+    <dfncert:refnum>DFN-CERT-2026-0004</dfncert:refnum>
+    <dfncert:version>1</dfncert:version>
+  </entry>
+  <entry>
+    <title>Smb4k: Zwei Schwachstellen ermöglichen u. a. das Ausführen beliebigen Programmcodes</title>
+    <link href="https://adv-archiv.dfn-cert.de/adv/2026-0005/" rel="alternate"/>
+    <updated>2026-01-02T10:31:28+01:00</updated>
+    <id>https://adv-archiv.dfn-cert.de/adv/2026-0005/</id>
+    <summary type="html">Ein Angreifer kann zwei Schwachstellen lokal ausnutzen, um beliebigen Programmcode auszuführen und einen Denial-of-Service (DoS)-Angriff durchzuführen.
+
+Für die Ausnutzung der Schwachstellen sind übliche Privilegien erforderlich. Die erfolgreiche Ausnutzung beider Schwachstellen kann Einfluss auf andere Komponenten haben.
+
+Für Debian 13 Trixie (stable) steht Version 4.0.0-1+deb13u1 von 'smb4k' bereit, um die beiden Schwachstellen zu beheben.</summary>
+    <dfncert:cve>CVE-2025-66002</dfncert:cve>
+    <dfncert:cve>CVE-2025-66003</dfncert:cve>
+    <published>2026-01-02T07:12:53+01:00</published>
+    <dfncert:refnum>DFN-CERT-2026-0005</dfncert:refnum>
+    <dfncert:version>1</dfncert:version>
+  </entry>
+  <entry>
+    <title>Podman: Eine Schwachstelle ermöglicht einen Denial-of-Service-Angriff</title>
+    <link href="https://adv-archiv.dfn-cert.de/adv/2026-0006/" rel="alternate"/>
+    <updated>2026-01-02T09:02:30+01:00</updated>
+    <id>https://adv-archiv.dfn-cert.de/adv/2026-0006/</id>
+    <summary type="html">Ein Angreifer kann eine Schwachstelle aus der Ferne ausnutzen, um einen Denial-of-Service (DoS)-Angriff durchzuführen.
+
+Für die Ausnutzung der Schwachstelle sind keine Privilegien erforderlich.
+
+Für openSUSE Leap 15.3 und SUSE Enterprise Storage 7.1 sowie für die SUSE Linux Enterprise Produkte Micro 5.2, Micro for Rancher 5.2 und Server 15 SP3 stehen Sicherheitsupdates für 'podman' bereit, um die Schwachstelle zu beheben.</summary>
+    <dfncert:cve>CVE-2025-47914</dfncert:cve>
+    <published>2026-01-02T07:35:54+01:00</published>
+    <dfncert:refnum>DFN-CERT-2026-0006</dfncert:refnum>
+    <dfncert:version>1</dfncert:version>
+  </entry>
+</feed>
