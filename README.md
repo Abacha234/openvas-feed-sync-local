@@ -1,4 +1,4 @@
-OpenVAS Feed Sync (GitLab)
+#OpenVAS Feed Sync (GitLab)
 This repository provides a centralized mirror of the OpenVAS/Greenbone community feeds, enabling organizations to:
 
 Mirror the feeds outside of Greenbone’s infrastructure.
